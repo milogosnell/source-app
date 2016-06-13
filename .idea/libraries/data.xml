@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="data">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/data/okhttp-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/data/jsoup-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/data/okio-1.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

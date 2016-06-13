@@ -1,4 +1,4 @@
-package com.milog.source.util;
+package com.milog.source.util.parse;
 
 import com.milog.source.data.SourceClass;
 import com.milog.source.data.SourceExpression;
@@ -24,7 +24,7 @@ import java.util.Date;
  */
 
 
-public class HTMLParserClasses extends HTMLParser {
+public class ClassesParser extends LoginParser {
 
     private static final int QUARTER_ONE   = 0;
     private static final int QUARTER_TWO   = 1;

@@ -2,7 +2,8 @@ package com.milog.source.data;
 
 import com.milog.source.networking.NetworkManager;
 import com.milog.source.networking.NetworkManagerInterface;
-import com.milog.source.util.HTMLParserClasses;
+import com.milog.source.util.parse.AssignmentsParser;
+import com.milog.source.util.parse.ClassesParser;
 import okhttp3.HttpUrl;
 
 import java.util.ArrayList;
@@ -64,7 +65,7 @@ public class DataManager implements NetworkManagerInterface {
             case LOGGED_IN: {
                 System.out.println("Callback successful and logged in. Took " + (System.nanoTime() - start) / 1000000000.0);
 
-                List<SourceExpression> expressions = HTMLParserClasses.parseHomeClasses(responseString);
+                List<SourceExpression> expressions = ClassesParser.parseHomeClasses(responseString);
 
                 semesterCount = 0;
                 semesterTotal = expressions.size();
@@ -82,8 +83,9 @@ public class DataManager implements NetworkManagerInterface {
                 semesterResponses.add(responseString);
 
                 if (semesterCount == semesterTotal) {
-                    System.out.println("Got all semesters from classes. Took " + (System.nanoTime() - start) / 1000000000.0);
-                    System.out.println(semesterCount);
+                    //sort semesterresponses
+                    AssignmentsParser.parseSourceClass(semesterResponses.get(2));
+
                 }
 
                 break;

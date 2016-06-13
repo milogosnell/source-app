@@ -1,6 +1,6 @@
 package com.milog.source.networking;
 
-import com.milog.source.util.HTMLParser;
+import com.milog.source.util.parse.LoginParser;
 import com.milog.source.util.Hashing;
 import okhttp3.*;
 
@@ -118,7 +118,7 @@ public class NetworkManager {
             case LOADING_INITIAL_PAGE:
                 System.out.println("Login Load Done");
 
-                PasswordContext context = HTMLParser.passwordContext(response.body());
+                PasswordContext context = LoginParser.passwordContext(response.body());
                 Request loginRequest = loginRequest(context.contextData, context.pstoken);
 
                 performLoginRequest(loginRequest);
@@ -148,7 +148,7 @@ public class NetworkManager {
 
         try {
             String responseBody = response.body().string();
-            NetworkLoginStatus loginStatus = HTMLParser.checkLogin(responseBody);
+            NetworkLoginStatus loginStatus = LoginParser.checkLogin(responseBody);
 
             switch (loginStatus) {
 

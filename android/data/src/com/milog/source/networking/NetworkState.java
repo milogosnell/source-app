@@ -9,5 +9,5 @@ public enum NetworkState {
     LOGGED_IN,
     LOADING_SEMESTER,
     SEMESTER_LOADED,
-    LOADING_INITIAL_PAGE;
+    LOADING_INITIAL_PAGE
 }

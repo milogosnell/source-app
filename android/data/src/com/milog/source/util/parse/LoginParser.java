@@ -1,4 +1,4 @@
-package com.milog.source.util;
+package com.milog.source.util.parse;
 
 import com.milog.source.networking.NetworkLoginStatus;
 import com.milog.source.networking.PasswordContext;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 
 
-public class HTMLParser {
+public class LoginParser {
 
     private static final String CONTEXT_DATA_KEY = "contextData";
     private static final String PSTOKEN_KEY = "pstoken";
